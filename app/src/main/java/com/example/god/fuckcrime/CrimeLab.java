@@ -14,13 +14,15 @@ public class CrimeLab {
 
     private CrimeLab(Context context) {
         this.mContext = context;
+        mCrimes=new ArrayList<>();
         for(int i=0;i<100;i++)
         {
             Crime crime=new Crime();
-            crime.setTitle("#"+i);
-            crime.setSolved(1%2==0);
+            crime.setTitle("#" + i);
+            crime.setSolved(i % 2 == 0);
             mCrimes.add(crime);
         }
+
     }
 
     public static CrimeLab getCrimeLab(Context context) {
