@@ -18,6 +18,8 @@
         android:layout_toLeftOf="@id/list_item_solved"
         android:text="title"
         android:paddingLeft="4dp"
+        android:focusable="false"
+        android:enabled="false"
         android:paddingRight="4dp"
 
         />

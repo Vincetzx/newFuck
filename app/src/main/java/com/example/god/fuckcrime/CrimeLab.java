@@ -3,6 +3,7 @@ package com.example.god.fuckcrime;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by god on 2016/1/28.
@@ -35,6 +36,18 @@ public class CrimeLab {
     public ArrayList<Crime> getCrimes()
     {
         return mCrimes;
+    }
+
+    public Crime getCrime(UUID uuid)
+    {
+        for (Crime c :
+                mCrimes) {
+            if (c.getId().equals(uuid))
+            {
+                return c;
+            }
+        }
+        return null;
     }
 
 }
